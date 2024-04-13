@@ -13,3 +13,4 @@ log4rs = { version = "1.3.0", features = ["background_rotation", "chrono", "comp
     "console_appender", "delete_roller", "size_trigger", "time_trigger", "fixed_window_roller", "rolling_file_appender"]}
 rand = "0.8.5"
 uuid = { version = "1.8.0", features = ["v4"] }
+futures = "0.3.30"
