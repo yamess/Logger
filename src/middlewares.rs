@@ -1,7 +1,7 @@
-use std::fmt::format;
+
 use std::future::{Ready, ready};
 use std::str::FromStr;
-use actix_web::dev::{forward_ready, ResourcePath, Service, ServiceRequest, ServiceResponse, Transform};
+use actix_web::dev::{forward_ready, Service, ServiceRequest, ServiceResponse, Transform};
 use actix_web::http::header;
 use futures::future::LocalBoxFuture;
 use crate::{generate_random_string, log_request};

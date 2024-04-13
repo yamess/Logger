@@ -2,20 +2,20 @@ use log;
 
 use actix_web::{self, App, HttpServer, HttpResponse, Responder, middleware};
 
-use actix_web::dev::{Service, ServiceResponse, Transform};
+
 use rand::distributions::{Alphanumeric, Distribution};
 use rand::Rng;
 mod utils;
 mod middlewares;
 
-use actix_web::middleware::Logger;
-use log::Record;
+
+
 use actix_web::dev::ServiceRequest;
-use futures::future::{ok, Ready};
-use std::task::{Context, Poll};
-use std::time::Duration;
-use actix_web::http::{StatusCode, Version};
-use crate::middlewares::{CorrelationId, CorrelationIdMiddleware};
+
+
+
+
+use crate::middlewares::{CorrelationId};
 use crate::utils::logger;
 use crate::utils::logger::{RequestLogger, RequestLoggerBuilder};
 

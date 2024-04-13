@@ -1,4 +1,4 @@
-use log;
+
 use log4rs::{
     append::rolling_file::policy::compound::trigger::size::SizeTrigger,
     append::rolling_file::RollingFileAppender,
@@ -16,7 +16,7 @@ const ARCHIVE_FILE_PATTERN: &str = "/tmp/logs/archives/output.{}.json";
 
 
 pub fn rolling_file_appender() -> RollingFileAppender {
-    let pattern = PatternEncoder::new(
+    let _pattern = PatternEncoder::new(
         "[{X(request_id)(Internal):<10}] - [{d(%Y-%m-%dT%H:%M:%S)(utc)} - {h({l}):<5.5} - \
         {T} - {f}:{L} - {M}]: {m}{n}"
     );

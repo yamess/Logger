@@ -6,8 +6,8 @@ use log::LevelFilter;
 
 
 use log;
-use log4rs::append::file::FileAppender;
-use log4rs::encode::json::JsonEncoder;
+
+
 
 use log4rs::encode::pattern::PatternEncoder;
 use log4rs::filter::threshold::ThresholdFilter;
