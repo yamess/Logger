@@ -22,7 +22,6 @@ pub fn rolling_file_appender() -> RollingFileAppender {
     );
 
     let size_trigger = SizeTrigger::new(TRIGGER_FILE_SIZE);
-    // let time_trigger = TimeTrigger::new(TimeTriggerConfig::new(TimeTriggerInterval::Second(60)));
     let roller = FixedWindowRoller::builder()
         .base(0)
         .build(ARCHIVE_FILE_PATTERN, LOG_FILE_COUNT)

@@ -3,17 +3,10 @@ use actix_web::http::{StatusCode, Version};
 use log4rs::append::console::ConsoleAppender;
 use log4rs::config::{Appender, Config, Root};
 use log::LevelFilter;
-
-
 use log;
-
-
-
 use log4rs::encode::pattern::PatternEncoder;
 use log4rs::filter::threshold::ThresholdFilter;
 use crate::utils::rolling_file_appender::rolling_file_appender;
-
-
 
 #[derive(Debug)]
 pub struct RequestLogger {

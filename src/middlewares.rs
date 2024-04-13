@@ -6,8 +6,8 @@ use actix_web::http::header;
 use futures::future::LocalBoxFuture;
 use crate::{generate_random_string, log_request};
 
-pub struct CorrelationId;
 
+pub struct CorrelationId;
 
 impl<S, B> Transform<S, ServiceRequest> for CorrelationId
 where
