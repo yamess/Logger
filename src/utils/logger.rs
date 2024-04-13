@@ -71,10 +71,6 @@ impl RequestLoggerBuilder {
         self
     }
 
-    pub fn status_code(mut self, status_code: StatusCode) -> Self {
-        self.status_code = status_code;
-        self
-    }
 
     pub fn build(self) -> RequestLogger {
         RequestLogger {
@@ -109,7 +105,7 @@ pub fn init_logger() {
 
     let pattern = PatternEncoder::new(
         "[{X(request_id)(Internal-Request):<16}] - [{d(%Y-%m-%dT%H:%M:%S)(utc)} - {h({l}):<5.5} - \
-        {T} - {M}:{L}]: {m}{n}"
+        {T} - {f}:{L} - {M}]: {m}{n}"
     );
 
     let stdout = ConsoleAppender::builder()

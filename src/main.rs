@@ -3,7 +3,7 @@ use log;
 use actix_web::{self, App, HttpServer, HttpResponse, Responder, middleware};
 
 
-use rand::distributions::{Alphanumeric, Distribution};
+use rand::distributions::Alphanumeric;
 use rand::Rng;
 mod utils;
 mod middlewares;
